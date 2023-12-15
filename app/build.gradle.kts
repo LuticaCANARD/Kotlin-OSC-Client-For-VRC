@@ -9,6 +9,8 @@
 plugins {
     // Apply the application plugin to add support for building a CLI application in Java.
     application
+    id("org.jetbrains.kotlin.jvm") version "2.0.0-Beta2"
+
 }
 
 repositories {
@@ -22,13 +24,16 @@ dependencies {
 
     // This dependency is used by the application.
     implementation("com.google.guava:guava:31.1-jre")
+    implementation("org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.21")
+
+
     implementation("com.illposed.osc:javaosc-core:0.8")
 
 }
 
 application {
     // Define the main class for the application.
-    mainClass.set("_kot.App")
+    mainClass.set("lutica_oscevent_adapter.AppKtKt")
 }
 
 tasks.named<Test>("test") {
