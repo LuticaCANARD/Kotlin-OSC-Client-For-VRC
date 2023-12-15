@@ -33,7 +33,7 @@ dependencies {
 
 application {
     // Define the main class for the application.
-    mainClass.set("lutica_oscevent_adapter.AppKtKt")
+    mainClass.set("lutica_oscevent_adapter.AppKt")
 }
 
 tasks.named<Test>("test") {

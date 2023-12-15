@@ -1,6 +1,6 @@
 package lutica_oscevent_adapter
 
-class AppKt {
+class App {
     val greeting: String
         get() {
             return "Hello World????!"
@@ -8,5 +8,5 @@ class AppKt {
 }
 
 fun main(args:Array<String>){
-    println(AppKt().greeting)
+    println(App().greeting)
 }
