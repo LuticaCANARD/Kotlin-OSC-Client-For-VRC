@@ -16,4 +16,6 @@
 
 - [KuroVine9](https://github.com/KuroVine9)
 
-    implementation("com.illposed.osc:javaosc-core:0.8")
+## Feature Infos
+
+- 1. collecting dance data  

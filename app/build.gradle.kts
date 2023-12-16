@@ -10,6 +10,7 @@ plugins {
     // Apply the application plugin to add support for building a CLI application in Java.
     application
     id("org.jetbrains.kotlin.jvm") version "2.0.0-Beta2"
+        id("org.openjfx.javafxplugin") version "0.0.7"
 
 }
 
@@ -25,17 +26,26 @@ dependencies {
     // This dependency is used by the application.
     implementation("com.google.guava:guava:31.1-jre")
     implementation("org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.21")
-
-
+    implementation("org.jetbrains.kotlin:kotlin-stdlib:1.6.21")
+    implementation("no.tornado:tornadofx:1.7.19")
     implementation("com.illposed.osc:javaosc-core:0.8")
 
+}
+
+javafx {
+    // will pull in transitive modules
+    modules("javafx.controls", "javafx.fxml") // replace with what you modules need
+
+    // another option is to use:
+    // modules = listOf("javafx.controls", "javafx.fxml")
+
+    version = "12.0.1" // or whatever version you're using
 }
 
 application {
     // Define the main class for the application.
     mainClass.set("lutica_oscevent_adapter.AppKt")
 }
-
 tasks.named<Test>("test") {
     // Use JUnit Platform for unit tests.
     useJUnitPlatform()
