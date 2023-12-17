@@ -44,7 +44,7 @@ javafx {
 
 application {
     // Define the main class for the application.
-    mainClass.set("lutica_oscevent_adapter.AppKt")
+    mainClass.set("lutica_oscevent_adapter.MainViewKt")
 }
 tasks.named<Test>("test") {
     // Use JUnit Platform for unit tests.

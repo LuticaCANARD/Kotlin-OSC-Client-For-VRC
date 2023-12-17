@@ -9,13 +9,15 @@ import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 import tornadofx.*;
 
-class App {
-    val greeting: String
-        get() {
-            return "Hello World????!"
-        }
+
+class MyView:View(){
+    override val root = vbox{
+        button("aaaa")
+        label("ffff")
+    }
 }
+class MainView :App(MyView::class)
 
 fun main(args:Array<String>){
-    println(App().greeting)
+    launch<MainView>(args)
 }
